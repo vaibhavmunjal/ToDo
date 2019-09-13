@@ -7,13 +7,28 @@
     <title>Backbone.js ToDo</title>
 </head>
 <body>
-    
 
-    <div id="container"></div>
+    <div class="todo">
+    <input type="text" name="" id="new-todo" minlength="1" autofocus>
+    <button class="save-todo">Add</button>
+    <ul class="todo-list"></ul>
+    </div>
 
-    <script 
+
+    <script
         data-main="./js/main"
         src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js">
     </script>
+
+    <script type="text/template" id="todo-item">
+        <div class="view">
+            <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+            <label><%- title %></label>
+            <button class="destroy">&times;</button>
+        </div>
+        <input class="edit" value="<%- title %>" placeholder="===================">
+    </script>
+
+
 </body>
 </html>

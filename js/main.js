@@ -7,8 +7,8 @@ require.config({
 });
 
 
-define(['app'],
+define(['views/appView'],
 	function(App) {
-		App.initialize();
+	new App();
 
 });
